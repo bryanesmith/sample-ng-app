@@ -27,13 +27,13 @@
           .state('teacherLesson.layout', { // The controller will transition to this state by default
             views: {
               "header": {
-                templateUrl: "partials/headers/teacherLesson.html"
+                templateUrl: "partials/teacherLesson/header.html"
               },
-              "description": {
-                templateUrl: "partials/descriptions/teacherLesson.html"
+              "navigation": {
+                templateUrl: "partials/teacherLesson/navigation.html"
               },
               "content": {
-                templateUrl: "partials/contents/teacherLesson.html"
+                templateUrl: "partials/teacherLesson/contents.html"
               }
             }
           })
