@@ -1,0 +1,34 @@
+.lesson {
+  background-color: #fff;
+  padding: 1em 2em;
+  position: relative; /* So can absolutely position .lesson-rating */
+}
+
+.lesson .lesson-rating {
+  background-color: #FFE599;
+  text-align: center;
+  font-size: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  line-height: 30px;
+}
+
+.lesson .lesson-rating .span12 {
+  min-height: 0; /* Override Bootstrap */
+}
+
+.lesson .lesson-content {
+  margin-top: 30px;
+}
+
+.lesson .lesson-content section {
+  border-bottom: 2px dotted #aaa;
+  padding-bottom: 1em;
+}
+
+.lesson .lesson-content section:last-child {
+  border-bottom: 0;
+}

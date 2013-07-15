@@ -1,0 +1,30 @@
+.basic-layout {
+  height: 100%;
+}
+
+.basic-layout.basic-layout header {
+  background-color: #597EAA;
+  color: #fff;
+}
+
+.basic-layout #page-description {
+  background-color: #8DBBE5;
+}
+
+.basic-layout #page-description .nav-tabs {
+  margin-top: .25em;
+  margin-bottom: 0;
+}
+
+.basic-layout #page-description .span12 {
+  min-height: 0; /* Override Bootstrap */
+}
+
+.basic-layout #page-content {
+}
+
+.basic-layout #page-content div[role=main] {
+  padding: 2em;
+  background-color: #ddd;
+}
+

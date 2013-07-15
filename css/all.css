@@ -1,0 +1,13 @@
+body {
+  font-size: 12px;
+}
+
+html, body, .container-fluid {
+  height: 100%;
+}
+
+.container-fluid {
+  padding-right: 0; /* Overriding Bootstrap */
+  padding-left: 0;  /* Overriding Bootstrap */
+}
+
