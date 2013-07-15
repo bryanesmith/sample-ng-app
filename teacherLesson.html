@@ -18,6 +18,10 @@
     <script src="apps/teacherLessonApp.js"></script>
 
     <style>
+      body {
+        font-size: 12px;
+      }
+
       html, body, .container-fluid, .basic-layout {
         height: 100%;
       }
@@ -27,10 +31,6 @@
         padding-left: 0;  /* Overriding Bootstrap */
       }
 
-      .basic-layout {
-        background-color: #E7F1FE;
-      }
-
       .basic-layout header {
         background-color: #597EAA;
         color: #fff;
@@ -38,10 +38,11 @@
 
       .basic-layout #page-description {
         background-color: #8DBBE5;
-        font-weight: bold;
-        text-align: center;
-        font-size: 1.15em;
-        padding: .5em 0;
+      }
+
+      .basic-layout #page-description .nav-tabs {
+        margin-top: .25em;
+        margin-bottom: 0;
       }
 
       .basic-layout #page-description .span12 {
@@ -52,10 +53,44 @@
       }
 
       .basic-layout #page-content div[role=main] {
-        margin-top: 1em;
-        margin-bottom: 1em;
+        padding: 2em;
+        background-color: #ddd;
       }
 
+      .lesson {
+        background-color: #fff;
+        padding: 1em 2em;
+        position: relative; /* So can absolutely position .lesson-rating */
+      }
+
+      .lesson .lesson-rating {
+        background-color: #FFE599;
+        text-align: center;
+        font-size: 1.5em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        line-height: 30px;
+      }
+
+      .lesson .lesson-rating .span12 {
+        min-height: 0; /* Override Bootstrap */
+      }
+
+      .lesson .lesson-content {
+        margin-top: 30px;
+      }
+
+      .lesson .lesson-content section {
+        border-bottom: 2px dotted #aaa;
+        padding-bottom: 1em;
+      }
+
+      .lesson .lesson-content section:last-child {
+        border-bottom: 0;
+      }
     </style>
 
   </head>
