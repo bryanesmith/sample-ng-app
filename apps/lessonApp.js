@@ -1,13 +1,28 @@
 (function(angular, $, window) {
     'use strict';
 
-    var profile = angular.module('lesson.teacher', [
+    var app = angular.module('lesson.teacher', [
         //'lesson.controller'
+        'ui.state'
     ]);
 
-    profile.config(['$routeProvider', function($routes) {
+    // === ANGULAR WAY ===
+    /* - - - - - - - - - - - - - - - - - - - - - - - - 
+    app.config(['$routeProvider', function($routes) {
         $routes.when('/', {
             templateUrl: 'layouts/basicLayout.html'
         });
     }]);
+    - - - - - - - - - - - - - - - - - - - - - - - - */
+
+    // === ANGULAR UI WAY ===
+    // Docs: https://github.com/angular-ui/ui-router
+    app.config(function($stateProvider) {
+      $stateProvider
+          .state('layout', {
+              url: "",
+              templateUrl: "layouts/basicLayout.html"
+          })
+    });
+    
 }(angular, $, window));
