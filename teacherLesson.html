@@ -14,6 +14,44 @@
     <!-- Teacher lesson -->
     <script src="apps/lessonApp.js"></script>
 
+    <style>
+      html, body, .container-fluid, .basic-layout {
+        height: 100%;
+      }
+
+      .container-fluid {
+        padding-right: 0; /* Overriding Bootstrap */
+        padding-left: 0;  /* Overriding Bootstrap */
+      }
+
+      .basic-layout header {
+        background-color: #597EAA;
+        color: #fff;
+      }
+
+      .basic-layout #page-description {
+        background-color: #8DBBE5;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.15em;
+        padding: .5em 0;
+      }
+
+      .basic-layout #page-description .span12 {
+        min-height: 0; /* Override Bootstrap */
+      }
+
+      .basic-layout #page-content {
+        background-color: #E7F1FE;
+      }
+
+      .basic-layout #page-content div[role=main] {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+    </style>
+
   </head>
   <body data-ng-app="lesson.teacher" data-ng-view></body>
 </html>

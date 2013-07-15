@@ -7,7 +7,7 @@
 
     profile.config(['$routeProvider', function($routes) {
         $routes.when('/', {
-            templateUrl: 'partials/lesson.html'
+            templateUrl: 'layouts/basicLayout.html'
         });
     }]);
 }(angular, $, window));
