@@ -8,7 +8,9 @@
       // Decorate scope to access common lesson data/functionality
       AbstractLesson($scope);
 
-      $state.transitionTo('teacherLesson.layout');
+      // Explicitly set the state. This is also implicitly accomplished via this
+      // URL, as specified in teacherLessonApp.js (set to the $stateProvider)
+      //$state.transitionTo('teacherLesson.layout');
     }]);
 
 }(angular, window));
