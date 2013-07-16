@@ -25,6 +25,10 @@
 
 .basic-layout #page-content div[role=main] {
   padding: 2em;
+}
+
+body {
   background-color: #ddd;
 }
+
 
