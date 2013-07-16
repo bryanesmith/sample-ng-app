@@ -32,12 +32,16 @@
               return 'Lesson #1';       // https://github.com/angular-ui/ui-router/wiki#resolve
             }
           },
+
           templateUrl: "layouts/basicLayout.html"
         })
           .state('teacherLesson.layout', {  // The controller will transition to this state by default
             url: "", // This is the state matching the root url. 
                      // Alternatively, if want a non-root path, could set to "/foo",
                      // and set $urlRouterProvider.otherwise("/foo")
+            data: {  // Custom data for this state.
+              showRating: true
+            },
             views: {
               "header": {
                 templateUrl: "partials/teacherLesson/header.html"
