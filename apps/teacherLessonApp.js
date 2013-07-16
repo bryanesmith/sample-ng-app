@@ -25,10 +25,16 @@
       $stateProvider
         .state('teacherLesson', {
           abstract: true, // Abstract, parent state: https://github.com/angular-ui/ui-router/wiki/Quick-Reference#abstract
-          templateUrl: "layouts/basicLayout.html",
-          controller: "TeacherLessonController"
+                          // Children states inherit properties of this state.
+          controller: "TeacherLessonController", 
+          resolve: {
+            lessonName: function() {    // Similar to vanilla Angular resolve.
+              return 'Lesson #1';       // https://github.com/angular-ui/ui-router/wiki#resolve
+            }
+          },
+          templateUrl: "layouts/basicLayout.html"
         })
-          .state('teacherLesson.layout', { // The controller will transition to this state by default
+          .state('teacherLesson.layout', {  // The controller will transition to this state by default
             url: "", // This is the state matching the root url. 
                      // Alternatively, if want a non-root path, could set to "/foo",
                      // and set $urlRouterProvider.otherwise("/foo")
